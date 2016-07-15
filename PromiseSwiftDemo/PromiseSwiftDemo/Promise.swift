@@ -28,7 +28,7 @@ public class Promise
         let p = Craft.promise()
         
         deffered.addChild(resolve, reject: reject, p: p)
-        print("deffered child count is ",deffered.children.count)
+        print("then is called...deffered child count is ",deffered.children.count)
         
         return p;
     }

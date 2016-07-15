@@ -39,6 +39,8 @@ public class Craft
         dispatch_async(q, {
             print("a block is called in global queue")
             
+            
+            //dispatch_get_main_queue 在这里是必须的，起到阻塞作用，让响应链全部设定完毕后，再开启最初调用
             dispatch_sync(dispatch_get_main_queue(), {
                 
                 
